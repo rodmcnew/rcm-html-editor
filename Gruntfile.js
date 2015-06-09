@@ -14,14 +14,16 @@ module.exports = function (grunt) {
                     },
                     files: {
                         'dist/<%= pkg.name %>.min.js': [
-                            'src/adapter-tinymce/rcm-html-editor-config.js',
-                            'src/adapter-tinymce/rcm-html-editor-options.js',
-                            'src/adapter-tinymce/rcm-html-editor.js',
-                            'src/adapter-tinymce/rcm-html-editor-toolbar.js',
                             'src/rcm-html-editor-guid.js',
                             'src/rcm-html-editor-event-manager.js',
                             'src/rcm-html-editor-service.js',
                             'src/angular-rcm-html-editor.js'
+                        ],
+                        'dist/adapter-tinymce/<%= pkg.name %>.min.js': [
+                            'src/adapter-tinymce/rcm-html-editor-config.js',
+                            'src/adapter-tinymce/rcm-html-editor-options.js',
+                            'src/adapter-tinymce/rcm-html-editor.js',
+                            'src/adapter-tinymce/rcm-html-editor-toolbar.js'
                         ]
                     }
                 }
@@ -29,11 +31,12 @@ module.exports = function (grunt) {
             cssmin: {
                 options: {
                     shorthandCompacting: false,
+                    sourceMap: true,
                     roundingPrecision: -1
                 },
                 target: {
                     files: {
-                        'dist/<%= pkg.name %>.min.css': [
+                        'dist/adapter-tinymce/<%= pkg.name %>.min.css': [
                             'src/adapter-tinymce/css/editor.css'
                         ]
                     }
@@ -44,24 +47,27 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'src/adapter-tinymce/html',
                     src: '**',
-                    dest: 'dist/html'
+                    dest: 'dist/adapter-tinymce/html'
                 }
             },
             concat: {
                 options: {
                 },
                 dist: {
-                    src: [
-                        'src/adapter-tinymce/rcm-html-editor-config.js',
-                        'src/adapter-tinymce/rcm-html-editor-options.js',
-                        'src/adapter-tinymce/rcm-html-editor.js',
-                        'src/adapter-tinymce/rcm-html-editor-toolbar.js',
-                        'src/rcm-html-editor-guid.js',
-                        'src/rcm-html-editor-event-manager.js',
-                        'src/rcm-html-editor-service.js',
-                        'src/angular-rcm-html-editor.js'
-                    ],
-                    dest: 'dist/<%= pkg.name %>.js'
+                    files: {
+                        'dist/<%= pkg.name %>.js': [
+                            'src/rcm-html-editor-guid.js',
+                            'src/rcm-html-editor-event-manager.js',
+                            'src/rcm-html-editor-service.js',
+                            'src/angular-rcm-html-editor.js'
+                        ],
+                        'dist/adapter-tinymce/<%= pkg.name %>.js': [
+                            'src/adapter-tinymce/rcm-html-editor-config.js',
+                            'src/adapter-tinymce/rcm-html-editor-options.js',
+                            'src/adapter-tinymce/rcm-html-editor.js',
+                            'src/adapter-tinymce/rcm-html-editor-toolbar.js'
+                        ]
+                    }
                 }
             }
         }
