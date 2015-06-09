@@ -22,8 +22,20 @@ module.exports = function (grunt) {
                             'src/rcm-html-editor-event-manager.js',
                             'src/rcm-html-editor-service.js',
                             'src/angular-rcm-html-editor.js'
-                        ],
-                        'dist/<%= pkg.name %>.min.css': ['src/adapter-tinymce/css/editor.css']
+                        ]
+                    }
+                }
+            },
+            cssmin: {
+                options: {
+                    shorthandCompacting: false,
+                    roundingPrecision: -1
+                },
+                target: {
+                    files: {
+                        'dist/<%= pkg.name %>.min.css': [
+                            'src/adapter-tinymce/css/editor.css'
+                        ]
                     }
                 }
             },
@@ -57,9 +69,10 @@ module.exports = function (grunt) {
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'copy', 'concat']);
+    grunt.registerTask('default', ['uglify', 'copy', 'cssmin', 'concat']);
 };
