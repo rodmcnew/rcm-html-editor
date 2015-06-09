@@ -1,0 +1,28 @@
+{
+  "name": "rcm-html-editor",
+  "homepage": "https://github.com/reliv/rcm-html-editor",
+  "description": "HTML Editor using AngularJs and TinyMCE Strategy",
+  "keywords": [
+    "javascipt",
+    "html",
+    "editor",
+    "angularjs"
+  ],
+  "authors": [
+    "James Jervis"
+  ],
+  "license": "BSD 2",
+  "dependencies": {
+    "angular": "1.*",
+    "bootstrap": "3.*",
+    "rcm-js-lib": "0.*"
+  },
+  "devDependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
