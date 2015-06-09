@@ -6,40 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RCM HTML Editor Examples</title>
 
-    <link href="/modules/rcm-twitter-bootstrap/bootstrap/css/bootstrap.css"
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
           media="screen"
           rel="stylesheet"
           type="text/css">
-    <link href="/modules/rcm-html-editor/rcm-html-editor.css"
+    <link href="/vendor/rcm-html-editor/dist/adapter-tinymce/rcm-html-editor.min.css"
           media="screen"
           rel="stylesheet"
           type="text/css">
-
-    <!--[if lt IE 9]>
-    <script type="text/javascript"
-            src="/modules/rcm/es5-shim-master/es5-shim.min.js"></script><![endif]-->
-    <script type="text/javascript"
-            src="/modules/rcm-jquery/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
-    <script type="text/javascript"
-            src="/modules/rcm-angular-js/angular/angular.js"></script>
-    <script type="text/javascript"
-            src="/modules/rcm-twitter-bootstrap/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript"
-            src="/modules/rcm-angular-js/ocLazyLoad/dist/ocLazyLoad.js"></script>
-    <script type="text/javascript"
-            src="/modules/rcm/rcm-core.js"></script>
-    <script type="text/javascript"
-            src="/modules/rcm-tinymce-js/tinymce/tinymce.js"></script>
-    <script type="text/javascript"
-            src="/modules/rcm-html-editor/rcm-html-editor.js"></script>
-
     <style type="text/css">
         div[rcm-html-edit] {
             color: #FF0000;
         }
     </style>
 
-    <script type="application/javascript">
+    <script type="text/javascript"
+            src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript"
+            src="/modules/rcm-angular-js/angular/angular.js"></script>
+    <script type="text/javascript"
+            src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript"
+            src="/modules/rcm-tinymce-js/tinymce/tinymce.js"></script>
+    <script type="text/javascript"
+            src="/vendor/rcm-html-editor/dist/adapter-tinymce/rcm-html-editor.js"></script>
+    <script type="text/javascript"
+            src="/vendor/rcm-html-editor/dist/rcm-html-editor.js"></script>
+
+    <script type="text/javascript">
         angular.module('RcmHtmlEditor')
             /* @EXAMPLE */
                 .controller(
@@ -212,6 +207,7 @@
                     <div id="htmlEditorToolbar-myEditor1">
                         <!-- NOTICE how this id maps to the edit area id -->
                     </div>
+                    <br style="clear: both"/>
                     <div id="myEditor1"
                          rcm-html-edit="something"
                          html-editor-type="text"
