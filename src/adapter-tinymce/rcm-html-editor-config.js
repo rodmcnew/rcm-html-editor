@@ -34,7 +34,7 @@ var rcmHtmlEditorConfig = {
             language: rcmHtmlEditorGlobalConfig.language,
 
             menubar: false,
-            plugins: "anchor, charmap, code, hr, image, linkwithjqueryautocomplete, paste, table, textcolor, colorpicker, elfinder",
+            plugins: "anchor, charmap, code, hr, image, linkwithjqueryautocomplete, paste, table, textcolor, colorpicker, rcmFileChooser",
             document_base_url: rcmHtmlEditorGlobalConfig.baseUrl,
             statusbar: false,
 
@@ -88,7 +88,7 @@ var rcmHtmlEditorConfig = {
             language: rcmHtmlEditorGlobalConfig.language,
 
             menubar: false,
-            plugins: "anchor, charmap, code, hr, image, linkwithjqueryautocomplete, paste, table, textcolor, colorpicker, elfinder",
+            plugins: "anchor, charmap, code, hr, image, linkwithjqueryautocomplete, paste, table, textcolor, colorpicker, rcmFileChooser",
             document_base_url: rcmHtmlEditorGlobalConfig.baseUrl,
             statusbar: false,
 
@@ -116,7 +116,7 @@ var rcmHtmlEditorConfig = {
             language: rcmHtmlEditorGlobalConfig.language,
 
             menubar: false,
-            plugins: "anchor, charmap, code, hr, image, linkwithjqueryautocomplete, paste, table, elfinder",
+            plugins: "anchor, charmap, code, hr, image, linkwithjqueryautocomplete, paste, table, rcmFileChooser",
             document_base_url: rcmHtmlEditorGlobalConfig.baseUrl,
             statusbar: false,
 
